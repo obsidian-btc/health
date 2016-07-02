@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+ENV['CONSOLE_DEVICE'] ||= 'stdout'
+ENV['LOGGER'] ||= 'on'
+ENV['LOG_COLOR'] ||= 'on'
+ENV['LOG_LEVEL'] ||= 'trace'
+
+require_relative '../init'
+
+
+begin
+  require 'pry'
+  Pry.config.prompt_name = 'health'
+  Pry.start
+rescue LoadError
+  require 'irb'
+  IRB.start
+end
