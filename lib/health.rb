@@ -16,7 +16,7 @@ class Health
       require 'socket'
       require 'json'
 
-      server = TCPServer.new('localhost', port_number)
+      server = TCPServer.new('0.0.0.0', port_number)
       @start_time = Time.now
 
       loop do
