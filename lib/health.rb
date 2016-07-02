@@ -28,10 +28,10 @@ class Health
         response_hash.merge! check.call if check
         response = JSON.pretty_generate(response_hash)
 
-        socket.print "http/1.1 200 ok\r\n" +
-          "content-type: application/json\r\n" +
-          "content-length: #{response.bytesize}\r\n" +
-        "connection: close\r\n"
+        socket.print "HTTP/1.1 200 OK\r\n" +
+          "Content-Type: application/json\r\n" +
+          "Content-Length: #{response.bytesize}\r\n" +
+          "Connection: close\r\n"
 
         socket.print "\r\n"
 
