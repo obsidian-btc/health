@@ -2,6 +2,12 @@ class Health
   attr_reader :port_number
   attr_reader :check
 
+  def self.start! &block
+    port_number = Settings.build("settings/health.json").get(:port)
+    instance = build(port_number, &block)
+    instance.start!
+  end
+
   def self.build port_number, &block
     instance = new port_number, &block
   end
