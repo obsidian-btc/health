@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.2.3'
   s.bindir = 'bin'
 
-  s.add_runtime_dependency 'settings'
+  s.add_runtime_dependency 'evt-settings'
 end
