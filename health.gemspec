@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'health'
-  s.version = '0.0.0.4'
+  s.version = '0.0.0.5'
   s.summary = 'health'
   s.description = ' '
 
